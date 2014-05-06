@@ -39,9 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounts\AssignAccountManagerCommand.cs" />
-    <Compile Include="Accounts\AssignAccountManagerHandler.cs" />
-    <Compile Include="Accounts\ReconcileAccountCommand.cs" />
+    <Compile Include="Accounts\CreateContactCommand.cs" />
+    <Compile Include="Accounts\CreateContactHandler.cs" />
     <Compile Include="Auditer.cs" />
     <Compile Include="Auditing\CommandAuditingHandler.cs" />
     <Compile Include="Command.cs" />
@@ -49,10 +48,18 @@
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransactionManager.cs" />
+    <Compile Include="Validation\IValidation.cs" />
+    <Compile Include="Validation\ContactValidationV1.cs" />
+    <Compile Include="Validation\IValidationList.cs" />
+    <Compile Include="Validation\JobDescriptionValidation.cs" />
+    <Compile Include="Validation\ValidationBase.cs" />
+    <Compile Include="Validation\ValidationException.cs" />
+    <Compile Include="Validation\ValidationList.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\tables.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
