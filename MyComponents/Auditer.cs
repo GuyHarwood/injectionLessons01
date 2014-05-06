@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace MyComponents
 {
-	public class Logger
+	public class Auditer
 	{
-		private static readonly ConcurrentBag<string> Logs;
+		private static readonly List<string> Logs;
 
-		static Logger()
+		static Auditer()
 		{
-			Logs = new ConcurrentBag<string>();
+			Logs = new List<string>();
 		}
 
 		public void Log(string message)

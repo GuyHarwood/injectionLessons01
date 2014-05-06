@@ -39,10 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounts\AssignAccountManagerCommand.cs" />
+    <Compile Include="Accounts\AssignAccountManagerHandler.cs" />
+    <Compile Include="Accounts\ReconcileAccountCommand.cs" />
+    <Compile Include="Auditer.cs" />
+    <Compile Include="Auditing\CommandAuditingHandler.cs" />
+    <Compile Include="Command.cs" />
     <Compile Include="ICommandHandler.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransactionManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\tables.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
