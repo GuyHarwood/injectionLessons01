@@ -6,16 +6,16 @@ namespace Core
 {
 	public class Logger
 	{
-		private static readonly ConcurrentBag<string> Logs;
+		private readonly ConcurrentBag<string> logs;
 
-		static Logger()
+		public Logger()
 		{
-			Logs = new ConcurrentBag<string>();
+			logs = new ConcurrentBag<string>();
 		}
 
 		public void Log(string message)
 		{
-			Logs.Add(string.Format("{0} - {1}", DateTime.Now.ToShortTimeString(), message));
+			logs.Add(string.Format("{0} - {1}", DateTime.Now.ToLongTimeString(), message));
 		}
 
 		public void Log(string format, params object[] args)
@@ -25,7 +25,7 @@ namespace Core
 
 		public IEnumerable<string> CurrentSnapshot()
 		{
-			return Logs.ToArray();
+			return logs.ToArray();
 		}
 	}
 }

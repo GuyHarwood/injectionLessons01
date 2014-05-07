@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Liskov\Settings.cs" />
     <Compile Include="No\AreaCalculator1.cs" />
     <Compile Include="No\AreaCalculator2.cs" />
     <Compile Include="No\Circle.cs" />

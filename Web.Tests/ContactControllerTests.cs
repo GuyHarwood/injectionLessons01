@@ -10,7 +10,7 @@ namespace Web.Tests
 	public class ContactControllerTests
 	{
 		[Test]
-		public void ResultIsNotNull()
+		public void SomeTest()
 		{
 			var contactRepositoryMock = new Mock<IContactRepository>();
 			var createContactHandlerMock = new Mock<ICommandHandler<CreateContactCommand>>();

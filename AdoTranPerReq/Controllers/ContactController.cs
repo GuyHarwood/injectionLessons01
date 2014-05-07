@@ -10,11 +10,13 @@ namespace ContactManager.Web.Controllers
 	{
 		private readonly IContactRepository contactRepository;
 		private readonly ICommandHandler<CreateContactCommand> createContactHandler;
+		private readonly UnitOfWork unitOfWork;
 
-		public ContactsController(IContactRepository contactRepository, ICommandHandler<CreateContactCommand> createContactHandler)
+		public ContactsController(IContactRepository contactRepository, ICommandHandler<CreateContactCommand> createContactHandler, UnitOfWork unitOfWork)
 		{
 			this.contactRepository = contactRepository;
 			this.createContactHandler = createContactHandler;
+			this.unitOfWork = unitOfWork;
 		}
 
 		public ActionResult Index()
