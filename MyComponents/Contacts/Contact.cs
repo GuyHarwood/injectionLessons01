@@ -1,9 +1,8 @@
 ﻿using System;
-using Core;
 
 namespace ContactManager.Contacts
 {
-	public class CreateContactCommand : Command
+	public class Contact
 	{
 		public Guid ContactId { get; set; }
 		public string Name { get; set; }

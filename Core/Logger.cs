@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace MyComponents
+namespace Core
 {
 	public class Logger
 	{

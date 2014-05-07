@@ -1,0 +1,25 @@
+﻿@model ContactManager.Web.Models.ContactIndexModel
+
+<h2>Contacts</h2>
+
+<table>
+	<tr>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model.Contacts)
+ {
+		<tr>
+			<td>
+				@item.ContactId
+			</td>
+			<td>
+				@item.Name
+			</td>
+			<td>
+				@item.Active
+			</td>
+		</tr>
+ }
+
+</table>

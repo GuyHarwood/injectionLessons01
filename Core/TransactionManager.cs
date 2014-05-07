@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace MyComponents
+namespace Core
 {
 	public class TransactionManager
 	{

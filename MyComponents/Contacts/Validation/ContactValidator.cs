@@ -1,7 +1,7 @@
 ﻿using System;
-using MyComponents.Validation;
+using Core.Validation;
 
-namespace MyComponents.Contacts.Validation
+namespace ContactManager.Contacts.Validation
 {
     public class ContactValidator
     {
@@ -9,16 +9,16 @@ namespace MyComponents.Contacts.Validation
         {
             const int minimumDescriptionLength = 10;
 
-            if (contact.Description.Length < minimumDescriptionLength)
+			if (Guid.Empty.Equals(contact.ContactId))
+				throw new ValidationException("ContactId has not been set by the client");
+
+			if (string.IsNullOrWhiteSpace(contact.Name))
+				throw new ValidationException("name is required");
+
+            if (contact.Name.Length < minimumDescriptionLength)
             {
                 throw new ValidationException(string.Format("Description must be at least {0} characters long", minimumDescriptionLength));
             }
-
-            if(string.IsNullOrWhiteSpace(contact.Name))
-                throw new ValidationException("name is required");
-
-            if(Guid.Empty.Equals(contact.ContactId))
-                throw new ValidationException("ContactId has not been set by the client");
         }
     }
 }

@@ -1,19 +1,20 @@
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using MyComponents;
+using System.Reflection;
+using System.Web.Mvc;
+using ContactManager.Contacts;
+using ContactManager.Web;
+using Core;
+using Core.Auditing;
+using SimpleInjector;
+using SimpleInjector.Extensions;
+using SimpleInjector.Integration.Web.Mvc;
 
-[assembly: WebActivator.PostApplicationStartMethod(typeof(AdoTranPerReq.App_Start.SimpleInjectorInitializer), "Initialize")]
+[assembly: WebActivator.PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
 
-namespace AdoTranPerReq.App_Start
+namespace ContactManager.Web
 {
-	using System.Reflection;
-	using System.Web.Mvc;
-
-	using SimpleInjector;
-	using SimpleInjector.Extensions;
-	using SimpleInjector.Integration.Web;
-	using SimpleInjector.Integration.Web.Mvc;
-
 	public static class SimpleInjectorInitializer
 	{
 		/// <summary>Initialize the container and register it as MVC3 Dependency Resolver.</summary>
@@ -35,6 +36,10 @@ namespace AdoTranPerReq.App_Start
 		{
 			container.RegisterPerWebRequest<IDbConnection>(CreateConnection);
 			container.RegisterSingle<Logger>();
+			container.Register<IDbCommand>(() => new SqlCommand(string.Empty,container.GetInstance<IDbConnection>() as SqlConnection));
+			container.RegisterPerWebRequest<IContactRepository, ContactRepository>();
+			container.RegisterManyForOpenGeneric(typeof(ICommandHandler<>), typeof(Contact).Assembly);
+			container.RegisterDecorator(typeof (ICommandHandler<>), typeof (CommandAuditingHandler<>));
 		}
 
 		private static IDbConnection CreateConnection()

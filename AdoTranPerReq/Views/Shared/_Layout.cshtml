@@ -7,10 +7,21 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    @RenderBody()
+	<body>
+		<ul>
+			<li>
+				@Html.ActionLink("Home","Index","Home")
+			</li>
+			<li>
+				@Html.ActionLink("List Contacts","Index","Contacts")
+			</li>
+			<li>
+				@Html.ActionLink("Create Contact","Create","Contacts")
+			</li>
+		</ul>
+		@RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
-</body>
+		@Scripts.Render("~/bundles/jquery")
+		@RenderSection("scripts", required: false)
+	</body>
 </html>

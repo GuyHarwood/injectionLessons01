@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoTranPerReq", "AdoTranPerReq\AdoTranPerReq.csproj", "{84070151-00AE-4F62-AF35-1C10FC929225}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "AdoTranPerReq\Web.csproj", "{84070151-00AE-4F62-AF35-1C10FC929225}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyComponents", "MyComponents\MyComponents.csproj", "{1F5A156C-38F2-4EA8-9978-67E2D0D99075}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager", "MyComponents\ContactManager.csproj", "{1F5A156C-38F2-4EA8-9978-67E2D0D99075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{C3DBE9EE-12B7-4B23-BEE6-13A51F4A424A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,8 +21,15 @@ Global
 		{1F5A156C-38F2-4EA8-9978-67E2D0D99075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F5A156C-38F2-4EA8-9978-67E2D0D99075}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F5A156C-38F2-4EA8-9978-67E2D0D99075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3DBE9EE-12B7-4B23-BEE6-13A51F4A424A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DBE9EE-12B7-4B23-BEE6-13A51F4A424A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DBE9EE-12B7-4B23-BEE6-13A51F4A424A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DBE9EE-12B7-4B23-BEE6-13A51F4A424A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
 using System;
 
-namespace MyComponents
+namespace Core
 {
 	public abstract class Command
 	{
