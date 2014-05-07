@@ -14,7 +14,7 @@ namespace Web.Tests
 		{
 			var contactRepositoryMock = new Mock<IContactRepository>();
 			var createContactHandlerMock = new Mock<ICommandHandler<CreateContactCommand>>();
-			var sut = new ContactsController(contactRepositoryMock.Object, createContactHandlerMock.Object);
+			var sut = new ContactsController(contactRepositoryMock.Object, createContactHandlerMock.Object, new UnitOfWork(new Logger()));
 			var result = sut.Index();
 			Assert.IsNotNull(result);
 		}
