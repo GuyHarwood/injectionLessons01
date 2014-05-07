@@ -40,6 +40,7 @@ namespace ContactManager.Web
 			container.RegisterPerWebRequest<IContactRepository, ContactRepository>();
 			container.RegisterManyForOpenGeneric(typeof(ICommandHandler<>), typeof(Contact).Assembly);
 			container.RegisterDecorator(typeof (ICommandHandler<>), typeof (CommandAuditingHandler<>));
+			container.RegisterSingle<UnitOfWork>();
 		}
 
 		private static IDbConnection CreateConnection()

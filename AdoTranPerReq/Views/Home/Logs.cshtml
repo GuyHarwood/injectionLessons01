@@ -1,0 +1,8 @@
+﻿@model ContactManager.Web.Controllers.HomeLogsModel
+
+<h2>Logs</h2>
+<ol>
+@foreach (var item in Model.Logs) {
+    <li>@item</li>
+}
+</ol>
