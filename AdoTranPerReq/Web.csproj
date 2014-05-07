@@ -142,6 +142,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Bus.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -238,6 +239,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Contacts\Create.cshtml" />
+    <Content Include="Views\Home\Logs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

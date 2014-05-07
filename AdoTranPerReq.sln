@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager", "MyCompone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{C3DBE9EE-12B7-4B23-BEE6-13A51F4A424A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID", "SOLID\SOLID.csproj", "{CD640911-EAB3-4CF6-BB7A-D4AFD88E0A01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{C3DBE9EE-12B7-4B23-BEE6-13A51F4A424A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3DBE9EE-12B7-4B23-BEE6-13A51F4A424A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3DBE9EE-12B7-4B23-BEE6-13A51F4A424A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD640911-EAB3-4CF6-BB7A-D4AFD88E0A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD640911-EAB3-4CF6-BB7A-D4AFD88E0A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD640911-EAB3-4CF6-BB7A-D4AFD88E0A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD640911-EAB3-4CF6-BB7A-D4AFD88E0A01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

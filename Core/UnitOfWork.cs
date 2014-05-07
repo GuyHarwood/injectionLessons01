@@ -3,15 +3,18 @@ using System.Data;
 
 namespace Core
 {
-	public class TransactionManager
+	public class UnitOfWork
 	{
-		private readonly IDbTransaction transaction;
+		private readonly Logger logger;
 		private readonly Guid id;
+		private readonly IDbTransaction transaction;
 
-		public TransactionManager(IDbConnection owner)
+		public UnitOfWork(IDbConnection owner, Logger logger)
 		{
+			this.logger = logger;
 			transaction = owner.BeginTransaction();
 			id = Guid.NewGuid();
+			logger.Log("Unit of work created at {0} with Id:{1}", DateTime.Now.ToLongTimeString(), id);
 		}
 
 		public string Id
