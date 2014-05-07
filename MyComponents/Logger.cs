@@ -18,6 +18,11 @@ namespace MyComponents
 			Logs.Add(string.Format("{0} - {1}", DateTime.Now.ToShortTimeString(), message));
 		}
 
+		public void Log(string format, params object[] args)
+		{
+			Log(string.Format(format,args));
+		}
+
 		public IEnumerable<string> CurrentSnapshot()
 		{
 			return Logs.ToArray();
