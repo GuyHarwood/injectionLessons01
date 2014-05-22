@@ -13,10 +13,8 @@ namespace SOLID.Legacy
             }
 
             var dataAccess = new DataAccess();
-            dataAccess.CreateIncident(account, incidentId, connection);
+            dataAccess.CreateIncident(account, incidentId, connection, transaction);
 
-            if(transaction != null)
-                transaction.Commit();
         }
     }
 }
