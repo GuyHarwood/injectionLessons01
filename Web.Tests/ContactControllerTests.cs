@@ -18,5 +18,12 @@ namespace Web.Tests
 			var result = sut.Index();
 			Assert.IsNotNull(result);
 		}
+
+	    [Test]
+	    public void theTest()
+	    {
+	        var sut = new ClosureController("sfkdsjfksdj");
+            Assert.IsNotNull(sut);
+	    }
 	}
 }

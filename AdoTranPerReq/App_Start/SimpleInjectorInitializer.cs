@@ -38,9 +38,10 @@ namespace ContactManager.Web
 			container.RegisterSingle<Logger>();
 			container.Register<IDbCommand>(() => new SqlCommand(string.Empty,container.GetInstance<IDbConnection>() as SqlConnection));
 			container.RegisterPerWebRequest<IContactRepository, ContactRepository>();
-			container.RegisterManyForOpenGeneric(typeof(ICommandHandler<>), typeof(Contact).Assembly);
+			//container.RegisterManyForOpenGeneric(typeof(ICommandHandler<>), typeof(Contact).Assembly);
+            container.RegisterPerWebRequest<ICommandHandler<CreateContactCommand>, CreateContactHandler>();
 			container.RegisterDecorator(typeof (ICommandHandler<>), typeof (CommandAuditingHandler<>));
-			container.RegisterSingle<UnitOfWork>();
+			container.Register<UnitOfWork>();
 		}
 
 		private static IDbConnection CreateConnection()
